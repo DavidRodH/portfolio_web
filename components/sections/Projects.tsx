@@ -38,6 +38,15 @@ const projects = [
     github: "",
   },
   {
+    title: "Universidad Nacional de Colombia - Rediseño de la página web Periodico UNAL",
+    description:
+      "Rediseño y desarrollo de la página web del periódico web de la Universidad Nacional de Colombia, incluyendo la creación de secciones, componentes y animaciones interactivas.",
+    img: "/images/projects/Periodico_UN.webp",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    demo: "https://periodico.unal.edu.co/",
+    github: "",
+  },
+  {
     title: "Campus virtual Defensoría del Pueblo",
     description:
       "Administracion del portal de Campus Virtual de la Defensoría del Pueblo, incluyendo la creación de secciones, componentes e infografias interactivas.",
@@ -64,15 +73,6 @@ const projects = [
     demo: "https://www.eltiempo.com/cultura/gente/historias-de-personas-que-luchan-contra-el-coronavirus-en-colombia-483152",
     github: "",
   },
-  /* {
-    title: "",
-    description:
-      "",
-    img: "/images/projects/.webp",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    demo: "",
-    github: "",
-  }, */
   /* {
     title: "",
     description:
