@@ -1,69 +1,95 @@
+import Link from "next/link";
 import Image from "next/image";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Services from "@/components/sections/Services";
+import Projects from "@/components/sections/Projects";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <main className="min-h-screen bg-slate-950 text-white">
+      {/* Navegación */}
+      <header className="border-b border-white/10">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <Link href="#inicio" className="text-xl font-bold">
+            Portafolio<span className="text-cyan-400">Web</span>
+          </Link>
+
+          <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+            <Link href="#sobre-mi" className="transition hover:text-cyan-400">
+              Sobre mí
+            </Link>
+
+            <Link href="#proyectos" className="transition hover:text-cyan-400">
+              Proyectos
+            </Link>
+
+            <Link href="#habilidades" className="transition hover:text-cyan-400">
+              Habilidades
+            </Link>            
+
+            <Link href="#contacto" className="transition hover:text-cyan-400">
+              Contacto
+            </Link>
+          </div>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contacto"
+            className="rounded-lg bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
+            Hablemos
+          </a>
+        </nav>
+      </header>
+
+      {/* Presentación principal */}
+
+      <section id="inicio" className="mx-auto min-h-[40vh] max-w-6xl px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 min-h-[60vh] items-center">
+          <div className="col-span-2">
+            <span className="text-cyan-400 font-semibold">
+              Hola, soy
+            </span>
+
+            <h1 className="mt-4 text-5xl font-bold">
+              David Rodriguez
+            </h1>
+
+            <p className="mt-8 mb-8 text-slate-400">
+              Desarrollo interfaces web atractivas, rápidas y adaptables a diferentes dispositivos, combinandodiseño, tecnología y una buena experiencia de usuario.
+            </p>
+
+            <a
+              href="#proyectos"
+              className="rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
+            >
+              Ver mis proyectos
+            </a>
+          </div>
+  
+          <div className="p-20 md:p-0">
             <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+              src="/images/profile-hero.webp"
+              alt="David Rodriguez"
+              width={600}
+              height={600}
+              className="rounded-full object-cover "
+              unoptimized
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <About />
+      <Projects />
+      <Skills />
+      <Services />      
+      <Contact />
+      <Footer />
+
+      {/* Las demás secciones se agregarán en los siguientes módulos */}
+    </main>
   );
 }
