@@ -58,7 +58,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-8 mb-8 text-slate-400">
-              Desarrollo interfaces web atractivas, rápidas y adaptables a diferentes dispositivos, combinandodiseño, tecnología y una buena experiencia de usuario.
+              Desarrollo interfaces web atractivas, rápidas y adaptables a diferentes dispositivos, combinando diseño, tecnología y una buena experiencia de usuario.
             </p>
 
             <a
