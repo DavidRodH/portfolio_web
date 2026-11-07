@@ -86,7 +86,7 @@ export default function About() {
 
             {/* CV */}
             <a
-              href="/pdf/Carlos David Rodriguez Hernandez - CV.pdf"
+              href="/pdf/Carlos_David_Rodriguez_Hernandez_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-block rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
